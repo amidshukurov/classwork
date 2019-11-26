@@ -1,4 +1,4 @@
-package classroom.web11_23_19;
+package classroom.web11_26_19.freemarker;
 
 public class Calc {
    public static int add(int a, int b){
