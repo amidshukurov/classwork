@@ -1,19 +1,22 @@
-package classroom.web11_23_19;
+package classroom.web03_12_2019.calclogin;
 
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 
-public class TheSimplestServer {
+/**
+ * http://localhost:9001/login
+ * http://localhost:9001/logout
+ * http://localhost:9001/do
+ */
+public class CookieApp {
   public static void main(String[] args) throws Exception {
     Server server = new Server(9001);
+
     ServletContextHandler handler = new ServletContextHandler();
-    handler.addServlet(HelloServlet.class, "/hello/*");
     handler.addServlet(LoginServlet.class, "/login/*");
-    handler.addServlet(HelpServlet.class, "/help/*");
-    handler.addServlet(FileServlet.class, "/file/*");
-    handler.addServlet(CalculatorServlet.class, "/calc/*");
-    handler.addServlet(FileServlet.class, "/*");
-    //handler.addServlet(Servlet404.class, "/*");
+    handler.addServlet(LogoutServlet.class, "/logout/*");
+    handler.addServlet(DoServlet.class, "/do/*");
+
     server.setHandler(handler);
     server.start();
     server.join();

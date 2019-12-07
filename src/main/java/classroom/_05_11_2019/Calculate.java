@@ -1,7 +1,7 @@
 package classroom._05_11_2019;
 
 
-class Calculate {
+public class Calculate {
     int calc(String origin) {
         int countOpen= 0;
         int countClose= 0;

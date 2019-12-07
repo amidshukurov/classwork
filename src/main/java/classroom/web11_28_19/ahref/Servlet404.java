@@ -1,4 +1,4 @@
-package classroom.web11_23_19;
+package classroom.web11_28_19.ahref;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -7,11 +7,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class HelloServlet extends HttpServlet {
+public class Servlet404 extends HttpServlet {
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     try (PrintWriter writer = resp.getWriter()) {
-      writer.println("<H1>Hello World</H1>");
+      writer.println("not found");
     }
   }
 }

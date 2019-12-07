@@ -1,17 +1,21 @@
-package classroom.web11_23_19;
+package classroom.web11_28_19.navi;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-public class Servlet404 extends HttpServlet {
+public class RedirectServlet extends HttpServlet {
+
+  private final String redirectTo;
+
+  public RedirectServlet(String redirectTo) {
+    this.redirectTo = redirectTo;
+  }
+
   @Override
   protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    try (PrintWriter writer = resp.getWriter()) {
-      writer.println("<H1>Not found</H1>");
-    }
+    resp.sendRedirect(redirectTo);
   }
 }
