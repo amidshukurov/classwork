@@ -3,9 +3,6 @@ package classroom.spring.warmup;
 import classroom._12_11_2019.warmup.GenArray;
 
 import java.util.*;
-import java.util.function.Function;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class Occurance {
     public static void main(String[] args) {
